@@ -1,0 +1,3 @@
+[submodule "box_builder"]
+	path = box_builder
+	url = git@github.com:Opligitory/stm32-dev-env-builder.git

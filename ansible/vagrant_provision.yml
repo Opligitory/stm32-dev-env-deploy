@@ -1,0 +1,19 @@
+---
+- name: Provision Vagrant Box
+  hosts: all
+  become: true
+  tasks:
+    - name: copying file with playbook
+      ansible.builtin.copy:
+        src: ../../src
+        dest: /home/vagrant
+        owner: vagrant
+        group: vagrant       
+        mode: 0760
+
+# - name: Provision Vagrant Box
+#   hosts: all
+#   become: false
+#   tasks:
+#     - name: Launch VSCode Remote SSH on host machine.
+#       local_action: ansible.builtin.command chdir=../../src code --folder-uri "vscode-remote://ssh-remote+vagrant@{{ ansible_host }}/home/vagrant/src"
